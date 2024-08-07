@@ -1,9 +1,3 @@
-//Form submission
-// document.getElementById('contact-form').addEventListener('submit', function(event) {
-//     event.preventDefault();
-//     alert('Thanks for contacting me!');
-// });
-
 //toggle navbar
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
@@ -24,7 +18,7 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height) {
+        if (top >= offset && top < offset + height) {
             navLinks.forEach.apply(links => {
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');

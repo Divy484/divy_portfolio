@@ -173,17 +173,17 @@
 
         <form id="contact-form" method="POST" action="/send">
             <div class="input-box">
-                <input type="text" name="name" placeholder="Full Name">
-                <input type="email" name="email" placeholder="Email Address">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
             </div>
 
             <div class="input-box">
-                <input type="text" name="mobile_number" placeholder="Mobile Number" pattern="[0-9]{10}">
-                <input type="text" name="email_subject" placeholder="Email Subject">
+                <input type="text" name="mobile_number" placeholder="Mobile Number" pattern="[0-9]{10}" required>
+                <input type="text" name="email_subject" placeholder="Email Subject" required>
             </div>
 
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
+            <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input class="btn" type="submit" value="Send Message">
         </form>
     </section>
 
