@@ -10,13 +10,13 @@
     <!--Main CSS-->
     <link rel="stylesheet" href="styles.css">
 
-    <title>Portfolio</title>
+    <title>Divy Patel</title>
 </head>
 <body>
 
     <!--Header Desgin-->
     <header class="header">
-        <a href="#" class="logo">Portfolio</a>
+        <a href="#" class="logo">Divy</a>
 
         <i class="fa-solid fa-bars" id="menu-icon"></i>
 
@@ -28,6 +28,15 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
+
+    <!-- Alert box for form -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const successMessage = urlParams.get('success');
+        if (successMessage) {
+            alert(successMessage);
+        }
+    </script>
 
     <!--Home Section Desgin-->
     <section class="home" id="home">
@@ -61,28 +70,38 @@
             <h2 class="heading">About <span>Me</span></h2>
             <h3>Backend Developer</h3>
             <p>I am a dedicated Computer Engineering student with a strong academic background and hands-on experience in hackathons. I have proficiency in Node.js, MySQL, and PHP, and I am eager to contribute to innovative and technology-driven projects.</p>
-            <a href="#" class="btn">Read more</a>
         </div>
     </section>
 
     <!--Skills Section Desgin-->
 
     <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
+        <h2 class="heading">Programming <span>Skills</span></h2>
 
         <div class="skills-container">
-            <div class="skills-box">
+            <div class="skills-box skills-text">
                 <i class="fa-solid fa-code"></i>
-                <h3>Web Development</h3>
-                <p>Proficient in designing and developing dynamic and responsive web applications. My expertise includes both frontend and backend technologies to deliver comprehensive web solutions.</p>
-                <a href="#" class="btn">Read More</a>
+                <div class="skills-names">
+                    <h3>Languages:</h3>
+                    <p>HTML, JavaScript, Python, SQL, PHP, C, C#</p>
+                    <h3>Frameworks:</h3>
+                    <p>Node.js, Express.js, Ejs, CSS, Bootstrap</p>
+                    <h3>Databases:</h3>
+                    <p>MySQL, MongoDB</p>
+                    <h3>Tools:</h3>
+                    <p>GitHub, Visual Studio Code, Figma, Spyder</p>
+                </div>
             </div>
 
-            <div class="skills-box">
-                <i class="fa-solid fa-palette"></i>
-                <h3>UI/UX Designing</h3>
-                <p>Skilled in creating intuitive and visually appealing user interfaces. I focus on enhancing user experience by applying modern design principles and techniques.</p>
-                <a href="#" class="btn">Read More</a>
+            <div class="skills-box skills-images">
+                    <img src="HTML.png" alt="HTML">
+                    <img src="CSS.png" alt="CSS">
+                    <img src="NodeJs.svg" alt="Node.js">
+                    <img src="Javascript.svg" alt="JavaScript">
+                    <img src="Express.png" alt="Express.js">
+                    <img src="MongoDB.svg" alt="MongoDB">
+                    <img src="sql-server.png" alt="SQL">
+                    <img src="Github.svg" alt="GitHub">
             </div>
         </div>
     </section>
@@ -152,9 +171,9 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form id="contact-form" method="post">
+        <form id="contact-form" method="POST" action="/send">
             <div class="input-box">
-                <input type="text" name="full_name" placeholder="Full Name">
+                <input type="text" name="name" placeholder="Full Name">
                 <input type="email" name="email" placeholder="Email Address">
             </div>
 

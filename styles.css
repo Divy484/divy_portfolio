@@ -105,9 +105,11 @@ span {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-2.4rem);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -193,7 +195,7 @@ span {
 .skills-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
     gap: 2rem;
 }
@@ -203,7 +205,7 @@ span {
     background: var(--snd-bg-color);
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
-    text-align: center;
+    text-align: left;
     border: .2rem solid var(--bg-color);
     transition: .5s ease;
 }
@@ -219,12 +221,32 @@ span {
 }
 
 .skills-box h3 {
-    font-size: 2.6rem;
+    font-size: 2.3rem;
 }
 
 .skills-box p {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
+}
+
+.skills-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8.5rem;
+}
+
+.skills-images img {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .projects {
