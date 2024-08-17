@@ -3,6 +3,8 @@ const nodemailer = require("nodemailer");
 const app = express();
 require('dotenv').config();
 
+const port = process.env.PORT;
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(express.static(__dirname));
@@ -44,6 +46,6 @@ app.post("/send", async (req, res) => {
     }
 });
 
-app.listen(2004, () => {
+app.listen(port, () => {
     console.log("server listening on port 2004");
 });
