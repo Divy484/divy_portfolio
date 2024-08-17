@@ -1,6 +1,7 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const app = express();
+require('dotenv').config();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
@@ -18,15 +19,15 @@ app.post("/send", async (req, res) => {
         const transporter = nodemailer.createTransport({
             service: 'Gmail',
             auth: {
-                user: 'divympatel21@gnu.ac.in', // Update with your Gmail email address
-                pass: 'Divyp@tel484' // Update with your Gmail password
+                user: process.env.EMAIL, // Update with your Gmail email address
+                pass: process.env.PASSWORD // Update with your Gmail password
             }
         });
 
         // Configure the email message
         const mailOptions = {
             from: 'Portfolio',
-            to: 'divympatel21@gnu.ac.in', // Use the retrieved email address
+            to: process.env.EMAIL, // Use the retrieved email address
             subject: email_subject,
             text: `Name: ${name},
         Email: ${email},
